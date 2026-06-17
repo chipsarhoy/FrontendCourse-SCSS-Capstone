@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 8vh;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  background-color: white;
+  box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.534);
+}
+header nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial;
+}
+header nav .left-nav-wrapper {
+  font-size: 18px;
+  height: 100%;
+  width: 8%;
+  color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .left-nav-wrapper a {
+  text-decoration: none;
+}
+header nav .right-nav-wrapper {
+  font-size: 12px;
+  height: 100%;
+  width: 20%;
+  text-transform: uppercase;
+  color: #555555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .right-nav-wrapper a {
+  text-decoration: none;
+}
+header nav .right-nav-wrapper .more {
+  background-color: #e91e63;
+  color: white;
+  padding: 20px 28px;
+  border-radius: 30px;
+}
+@media (max-width: 1400px) {
+  header nav .right-nav-wrapper {
+    width: 350px;
+  }
+}
+@media (max-width: 1400px) {
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+}
+@media (max-width: 1400px) {
+  header {
+    height: 20vh;
+  }
+}
+
+.blog-button {
+  color: #e91e63;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .hero-container {
+  position: relative;
+  width: 100%;
+  background-color: #e91e63;
+  color: white;
+  padding: 168px 0 168px 0;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .information-container {
+  position: relative;
+  margin-top: -8vh;
+  z-index: 1;
+  width: 95%;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.534);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .information-container .information-content-container {
+  padding: 100px 0;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 100px;
+}
+main .information-container .information-content-container .category {
+  line-height: 25px;
+}
+main .information-container .information-content-container .category h3 {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+main .information-container .information-content-container .category h2 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+main .information-container .information-content-container .category p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+main .information-container .information-content-container .category .sample-text {
+  color: #999999;
+  margin-top: 20px;
+}
+main .information-container .information-content-container .category span {
+  font-weight: bold;
+}
+main .information-container .information-content-container .thousand-words-wrapper h3 {
+  color: #89229b;
+}
+main .information-container .information-content-container .elements-wrapper h3 {
+  color: #00bcd4;
+}
+main .information-container .information-content-container .more-tags-wrapper h3 {
+  color: #f44336;
+}
+main .information-container .information-content-container .html-wrapper h3 {
+  color: #ff9800;
+}
+main .information-container .information-content-container .links-wrapper h3 {
+  color: #e91e63;
+}
+main .information-container .information-content-container .category-hierarchy-wrapper h3 {
+  color: #4caf50;
+}
+main .information-container .information-content-container .hello-world-wrapper h3 {
+  color: #89229b;
+}
+
+footer {
+  position: relative;
+  color: white;
+  padding: 50px 0 30px 0;
+  background-color: #323437;
+  text-align: right;
+  width: 100%;
+  font-size: 14px;
+}
+footer p {
+  padding-right: 125px;
+}
+@media (max-width: 1364px) {
+  footer {
+    text-align: center;
+    padding: 30px 0;
+  }
+}/*# sourceMappingURL=blog.css.map */
