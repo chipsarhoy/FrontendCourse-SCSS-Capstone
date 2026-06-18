@@ -30,6 +30,7 @@ header nav .left-nav-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 header nav .left-nav-wrapper a {
   text-decoration: none;
@@ -43,6 +44,7 @@ header nav .right-nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 header nav .right-nav-wrapper a {
   text-decoration: none;
@@ -63,6 +65,7 @@ header nav .right-nav-wrapper .more {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     flex-flow: column;
   }
 }
@@ -82,6 +85,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex-direction: column;
 }
 main .hero-container {
@@ -94,6 +98,7 @@ main .hero-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 main .information-container {
   position: relative;
@@ -106,6 +111,7 @@ main .information-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 main .information-container .information-content-container {
   padding: 100px 0;
@@ -113,6 +119,7 @@ main .information-container .information-content-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: row;
   flex-direction: column;
   gap: 100px;
 }

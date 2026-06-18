@@ -1,5 +1,9 @@
 @use "../common/mixins" as *;
 
+body {
+  background-color: #e5e5e5;
+}
+
 p {
   font-size: 18px;
 }
@@ -18,7 +22,7 @@ p {
     position: relative;
     width: 95%;
     border-radius: 20px 20px 0 0;
-    box-shadow: 0 0 10px 2px rgb(0, 0, 0, 0.534);
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.534);
     z-index: 2;
     margin-top: -8vh;
     background-color: white;
@@ -168,6 +172,9 @@ p {
           display: block;
         }
 
+        input[type="file"] {
+          display: block;
+        }
         button[type="reset"] {
           display: inline;
           width: 45px;
@@ -194,18 +201,19 @@ p {
 
     .tables-wrapper {
       margin-top: 30px;
+      line-height: 40px;
 
       table {
         margin-top: 30px;
+        font-size: 18px;
 
         thead {
           th {
             text-align: left;
-          }
-
-          &::after {
-            @include line-border($margin-top: 2px) {
-              width: 250%;
+            &::after {
+              @include line-border($margin-top: 2px) {
+                width: 100%;
+              }
             }
           }
         }
@@ -213,49 +221,175 @@ p {
         tbody {
           tr {
             margin: 20px 0;
-            &::after {
-              @include line-border($margin-top: 2px) {
-                width: 250%;
-                height: 0.1px;
+          }
+
+          .row {
+            td {
+              &::after {
+                @include line-border($margin-top: 2px) {
+                  width: 100%;
+                }
               }
             }
           }
         }
       }
+
+      &::after {
+        @include line-border($margin-top: 20px);
+      }
+    }
+
+    .misc-wrapper {
+      h2 {
+        line-height: 70px;
+      }
+
+      p {
+        line-height: 28px;
+      }
+
+      pre {
+        overflow-x: auto;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      blockquote {
+        font-size: 18px;
+        padding: 30px;
+        line-height: 30px;
+      }
+    }
+
+    .categories-social-media-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .left-section-wrapper {
+        display: inline;
+
+        a {
+          color: white;
+          font-size: 10px;
+          text-transform: uppercase;
+          padding: 6px 10px;
+          background-color: #e91e63;
+          border-radius: 20px;
+        }
+      }
+      .right-section-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+          width: 40px;
+        }
+        .facebook {
+          img {
+            background-color: blue;
+            z-index: 3;
+            width: 25px;
+            height: 25px;
+            padding: 3px;
+            border-radius: 20px;
+          }
+        }
+
+        .X {
+          img {
+            color: white;
+            width: 25px;
+            height: 25px;
+            border: 1px solid black;
+            padding: 2px;
+            border-radius: 20px;
+          }
+        }
+
+        .mail {
+          i {
+            color: white;
+            background-color: gray;
+            font-size: 20px;
+            padding: 6px;
+            border-radius: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    &::after {
+      @include line-border($margin-top: 50px);
+    }
+
+    @media (max-width: 1330px) {
+      * {
+        width: 75%;
+      }
     }
   }
 }
 
-.categories-social-media-wrapper {
-  .facebook {
-    img {
-      background-color: blue;
-      z-index: 3;
-      width: 25px;
-      height: 25px;
-      padding: 3px;
-      border-radius: 20px;
-    }
+.related-posts-container {
+  h2 {
+    margin-top: 150px;
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-size: 37px;
   }
 
-  .X {
-    img {
-      color: white;
-      width: 25px;
-      height: 25px;
-      border: 1px solid black;
-      padding: 2px;
-      border-radius: 20px;
-    }
-  }
+  .content-wrapper {
+    @include flex-center($align-items: flex-start);
+    .posts {
+      background-color: white;
+      width: 300px;
+      height: auto;
+      margin: 95px 20px;
+      padding: 30px;
+      border-radius: 7px;
+      box-shadow: 0 2px 1px 1px rgba(95, 94, 94, 0.534);
+      @include flex-center($flex-direction: column, $align-items: flex-start);
 
-  .mail {
-    i {
-      color: white;
-      background-color: gray;
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 20px;
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      h3 {
+        font-family: "Roboto Slab";
+        font-size: 18px;
+        padding: 20px 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: #999999;
+        font-family: Arial;
+        line-height: 23px;
+      }
+    }
+
+    .thousand-words-wrapper {
+      a {
+        color: #89229b;
+      }
+    }
+
+    .more-tags-wrapper {
+      a {
+        color: #00bcd4;
+      }
+    }
+
+    .html-wrapper {
+      a {
+        color: #f44336;
+      }
     }
   }
 }
